@@ -1,0 +1,552 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Hajj Experience from UK — Guide</title>
+<meta name="description" content="A practical Hajj experience and planning guide for pilgrims from the UK."/>
+<style>
+  :root {
+    --bg:#fff; --fg:#0b1220; --muted:#6b7280; --brand:#0ea5e9; --card:#f8fafc; --border:#e5e7eb;
+    --h2:#0ea5e9; --h3:#8b5cf6;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg:#0b1220; --fg:#e5e7eb; --muted:#9ca3af; --brand:#22d3ee; --card:#111827; --border:#1f2937;
+      --h2:#22d3ee; --h3:#a78bfa;
+    }
+  }
+  html,body{margin:0;padding:0;background:var(--bg);color:var(--fg);font:16px/1.65 ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Noto Sans,Ubuntu,Cantarell,Arial}
+  a{color:var(--brand);text-decoration:none} a:hover{text-decoration:underline}
+
+  .wrap{max-width:1200px;margin:0 auto;padding:1.25rem}
+  header.hero{background:linear-gradient(135deg,var(--card),transparent);border-radius:16px;border:1px solid var(--border);padding:1.25rem 1.25rem 1rem;margin:.5rem 0 1rem}
+  header.hero h1{margin:.1rem 0;font-size:clamp(2.2rem,4vw,3rem)}
+  header.hero p{margin:.3rem 0 0;color:var(--muted)}
+
+  .grid{display:grid;grid-template-columns:300px 1fr;gap:1.25rem}
+  @media (max-width:980px){.grid{grid-template-columns:1fr}}
+
+  nav.toc{position:sticky;top:1rem;align-self:start;background:var(--card);border:1px solid var(--border);border-radius:14px;padding:1rem;max-height:80vh;overflow:auto}
+  nav.toc h2{font-size:1rem;margin:.25rem 0 .75rem;color:var(--muted);letter-spacing:.02em;text-transform:uppercase}
+  .toc-list{list-style:none;margin:0;padding:0}
+  .toc-list > li.sec{margin:.35rem 0}
+  .toc-list a{display:flex;align-items:center;gap:.5rem;color:var(--fg)}
+  .toc-list .sublist{list-style:none;margin:.25rem 0 .35rem 1.25rem;padding:0}
+  .dot{display:inline-block;width:.6rem;height:.6rem;border-radius:999px;border:2px solid var(--border)}
+  .sec-dot{background:var(--h2)} .sub-dot{background:var(--h3)}
+  li.sub a{font-size:.95rem;color:var(--muted)}
+  li.sub a:hover{color:var(--fg)}
+
+  article{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:1.2rem}
+  article h2, article h3, article h4{scroll-margin-top:96px}
+  article h2{font-size:clamp(1.9rem,2.8vw,2.3rem);margin-top:1.6rem;border-left:8px solid var(--h2);padding-left:.65rem;color:var(--h2)}
+  article h3{font-size:clamp(1.45rem,2vw,1.75rem);margin-top:1.2rem;border-left:5px solid var(--h3);padding-left:.6rem;color:var(--h3)}
+  article h2 .anchor, article h3 .anchor{margin-right:.5rem;color:var(--muted)}
+  article p{margin:.6rem 0}
+  ul{margin:.6rem 0 .6rem 1.25rem}
+
+  .doc-image, .doc-image img{display:block;max-width:100%}
+  .doc-image{background:var(--bg);border:1px solid var(--border);border-radius:12px;overflow:hidden;margin:.8rem 0}
+  .doc-image figcaption{font-size:.85rem;color:var(--muted);padding:.4rem .6rem;border-top:1px solid var(--border)}
+  .inline-img{max-height:280px;vertical-align:middle;border:1px solid var(--border);border-radius:6px}
+
+  .table-wrap{overflow-x:auto;margin:.9rem 0}
+  table{border-collapse:collapse;width:100%;min-width:520px} td,th{border:1px solid var(--border);padding:.5rem .6rem;vertical-align:top}
+
+  footer{color:var(--muted);font-size:.9rem;padding:1.5rem 0}
+  .chip{display:inline-block;padding:.15rem .55rem;border:1px solid var(--border);border-radius:999px;font-size:.8rem;background:var(--bg)}
+
+  :target{background:rgba(14,165,233,0.08)}
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <header class="hero">
+      <h1>Hajj Experience from UK</h1>
+      <p>Practical notes and tips for first-time pilgrims travelling from the UK. <span class="chip">Last built 2025-09-09</span></p>
+    </header>
+
+    <div class="grid">
+      <nav class="toc">
+        <h2>Navigation</h2>
+        <ul class='toc-list'>
+          <li class='sec'><a href='#introduction'><span class='dot sec-dot'></span>Introduction</a></li>
+          <li class='sec'><a href='#i-registration-on-the-nusuk-website'><span class='dot sec-dot'></span>I. Registration on the Nusuk website</a>
+            <ul class='sublist'>
+              <li class='sub'><a href='#i-registration-on-the-nusuk-website-registration-steps'><span class='dot sub-dot'></span>Registration steps</a></li>
+              <li class='sub'><a href='#i-registration-on-the-nusuk-website-profile-verification'><span class='dot sub-dot'></span>Profile verification</a></li>
+            </ul>
+          </li>
+          <li class='sec'><a href='#ii-selecting-your-hajj-package'><span class='dot sec-dot'></span>II. Selecting your Hajj package</a>
+            <ul class='sublist'>
+              <li class='sub'><a href='#ii-selecting-your-hajj-package-package-types'><span class='dot sub-dot'></span>Package types</a></li>
+              <li class='sub'><a href='#ii-selecting-your-hajj-package-service-level'><span class='dot sub-dot'></span>Service level</a></li>
+              <li class='sub'><a href='#ii-selecting-your-hajj-package-public-vs-custom-packages'><span class='dot sub-dot'></span>Public vs Custom packages</a></li>
+              <li class='sub'><a href='#ii-selecting-your-hajj-package-accommodation-type'><span class='dot sub-dot'></span>Accommodation type</a></li>
+              <li class='sub'><a href='#ii-selecting-your-hajj-package-mina-camps-al-muaisim-vs-majar-al-kabsh'><span class='dot sub-dot'></span>Mina camps: Al-Muaisim vs Majar Al-Kabsh</a></li>
+              <li class='sub'><a href='#ii-selecting-your-hajj-package-saudi-service-providers'><span class='dot sub-dot'></span>Saudi service providers</a></li>
+              <li class='sub'><a href='#ii-selecting-your-hajj-package-cost'><span class='dot sub-dot'></span>Cost</a></li>
+            </ul>
+          </li>
+          <li class='sec'><a href='#iii-top-up-your-nusuk-ewallet'><span class='dot sec-dot'></span>III. Top up your Nusuk eWallet</a></li>
+          <li class='sec'><a href='#iv-travel-preparation-packing-checklist'><span class='dot sec-dot'></span>IV. Travel preparation (packing checklist)</a></li>
+          <li class='sec'><a href='#v-practical-advice'><span class='dot sec-dot'></span>V. Practical advice</a></li>
+          <li class='sec'><a href='#vi-hajj-rituals'><span class='dot sec-dot'></span>VI. Hajj rituals</a></li>
+          <li class='sec'><a href='#vii-videos-additional-materials-questions-to-expect'><span class='dot sec-dot'></span>VII. Videos &amp; additional materials &amp; Questions to expect</a></li>
+          <li class='sec'><a href='#viii-duas'><span class='dot sec-dot'></span>VIII. Duas</a></li>
+        </ul>
+      </nav>
+
+      <article>
+        <!-- Front matter -->
+        <p>Hajj Experience from UK</p>
+        <p>This document is useful for first‑time pilgrims travelling from the United Kingdom</p>
+        <p>Authors: Abdellatif Salah &amp; Manel Ibrahim</p>
+        <p>Email us for any questions or additional information: abdellatif. Salah@gmail. Com</p>
+
+        <!-- Introduction -->
+        <h2 id='introduction'><span class='anchor'>#</span>Introduction</h2>
+        <p dir="rtl" lang="ar">بسم الله الرحمن الرحيم</p>
+        <p dir="rtl" lang="ar">الحمد لله الذي بنعمته تتم الصالحات</p>
+        <p dir="rtl" lang="ar">الحمد لله الذي أكرمنا بنعمة الحج، ونسأله سبحانه أن يتقبل منا أعمالنا، ويغفر لنا ذنوبنا، ويزيدنا قربًا منه وطاعةً له. اللهم لك الحمد والشكر كما يليق بجلال وجهك وعظيم سلطانك، نحمدك ونشكرك ونسألك أن نكون من التائبين المقبولين، وأن تغفر لنا جميع ذنوبنا، يا أرحم الراحمين.</p>
+        <p dir="rtl" lang="ar">نسأل الله أن يرزق من لم يحج بعد الحج عاجلاً غير آجل، وأن يرزق من حجّ زيارةً لبيته قريبا</p>
+        <p>In the name of Allah, the Most Gracious, the Most Merciful</p>
+        <p>All praise is due to Allah, by whose grace righteous deeds are completed.</p>
+        <p>All praise is due to Allah, who has honored us with the blessing of Hajj. We ask Him, the Exalted, to accept our deeds, forgive our sins, and bring us closer to Him in obedience and devotion. O Allah, to You belongs all praise and thanks, as befits the majesty of Your Face and the greatness of Your Sovereignty. We praise You, we thank You, and we ask You to make us among the accepted and repentant, and to forgive all our sins, O Most Merciful of the merciful.</p>
+        <p>We ask Allah to grant Hajj, without delay, to those who have not yet performed it, and to bless those who have with another visit to His Sacred House soon.</p>
+        <p>This page offers an overview of my Hajj experience with my wife. My intention is to support those planning to perform Hajj by sharing the steps we followed and the journey we experienced. While it&#x27;s challenging to capture every single detail, I’ve done my best to include as much useful information as possible.</p>
+        <p>Please note that the Hajj registration process and logistical arrangements may vary from year to year. In fact, they had already changed compared to previous years. Therefore, I encourage you to use this page as a general guide and to verify all information through official and up-to-date sources.</p>
+
+        <!-- I. Registration -->
+        <h2 id='i-registration-on-the-nusuk-website'><span class='anchor'>#</span>I. Registration on the Nusuk website</h2>
+        <p>Visit the official Nusuk Hajj portal: https: //hajj. Nusuk. Sa. This is the central platform for managing your Hajj application and approval.</p>
+
+        <h3 id='i-registration-on-the-nusuk-website-registration-steps'><span class='anchor'>#</span>Registration steps</h3>
+        <ul>
+          <li>Step 1: Create an account on the Nusuk Hajj portal.</li>
+          <li>Step 2: Upload your required documents (passport and photo).</li>
+          <li>Step 3: Complete the application form.</li>
+          <li>Your application will then be submitted for official verification.</li>
+        </ul>
+        <p>Once submitted, you may need to wait a few days to a few weeks for the Saudi authorities to approve your account.</p>
+        <p>If more than one family member is performing Hajj, each individual has to register separately on the portal. Once all accounts are approved, one person (the main applicant) can link the family members together through their account.</p>
+
+        <p>Your passport</p>
+        <p>Get a clear copy of the main biometric page of your passport ready. You can either scan it or take a well-lit photo.</p>
+        <ul>
+          <li>Accepted file formats: PNG or JPG</li>
+          <li>Maximum dimensions: 800 x 400 pixels</li>
+          <li>Maximum file size: 1 MB</li>
+        </ul>
+        <p><a href='assets/images/image1.png' target='_blank' rel='noopener'><img src='assets/images/image1.png' alt='Picture 21' loading='lazy' class='inline-img'/></a></p>
+
+        <p>Passport photo</p>
+        <p>Take a clear photo of yourself using your phone or camera.</p>
+        <p>Requirements:</p>
+        <ul>
+          <li>Format: PNG or JPG</li>
+          <li>Size: 200 x 200 pixels, maximum 18 KB</li>
+          <li>Background: White</li>
+          <li>Clothing: Modest attire</li>
+        </ul>
+        <p>Make sure the photo is recent and clearly shows your face.</p>
+        <p><a href='assets/images/image2.png' target='_blank' rel='noopener'><img src='assets/images/image2.png' alt='Picture 22' loading='lazy' class='inline-img'/></a></p>
+
+        <p>And if applicable:</p>
+        <ul>
+          <li>Your digital copy of your BRP (Biometric Residence Permit)</li>
+        </ul>
+        <p><a href='assets/images/image3.png' target='_blank' rel='noopener'><img src='assets/images/image3.png' alt='Picture 23' loading='lazy' class='inline-img'/></a></p>
+
+        <h3 id='i-registration-on-the-nusuk-website-profile-verification'><span class='anchor'>#</span>Profile verification</h3>
+        <p>Nusuk Hajj registration</p>
+        <p>Verification of Nusuk Hajj registrations typically begins around six months before the Hajj season. For Hajj 2025 (which began in early June), verification started in early December 2024. If you intend to perform Hajj in 2026, aim to complete your registration in November–December 2025.</p>
+        <p>In the previous cycle, registrations appeared to remain open until February, but timelines can change. Always confirm current dates on the official Nusuk Hajj portal or other Saudi government sources.</p>
+        <p dir="rtl" lang="ar">Once your profile has been verified, you will receive a confirmation email from Nusuk with the subject: “Audit has been Completed.”The official email address it will come from is:Nusuk Hajj – نـُـسُـك حج no_reply@hajj.nusuk.sa</p>
+        <p>Important Notes:</p>
+        <ul>
+          <li>If your profile hasn’t been verified yet, don’t worry. The Nusuk team is reviewing all applications in order.</li>
+          <li>If there is an issue with your submission, you will be notified and asked to correct the information and resubmit. This is a normal part of the process.</li>
+          <li>If it taking too much time, you can message them from your Nusuk profile but they are very slow to answer. You may need to call them on their phone Number: +966126866860 (be careful as you will be charged for the call) or apparently you can send a WhatsApp message on the same number (I called once as my wife’s first name didn’t fit in the provided box as they have a limit in the number of characters and they proposed to split it in two one half under first name and the second half under father’s name and this has resolved the issue)</li>
+        </ul>
+        <p><a href='assets/images/image4.png' target='_blank' rel='noopener'><img src='assets/images/image4.png' alt='Picture 24' loading='lazy' class='inline-img'/></a></p>
+
+        <!-- II. Selecting your Hajj package -->
+        <h2 id='ii-selecting-your-hajj-package'><span class='anchor'>#</span>II. Selecting your Hajj package</h2>
+        <p>Once your profile has been verified, you need to log into Nusuk Hajj and take the following two actions:</p>
+
+        <h3 id='ii-selecting-your-hajj-package-package-types'><span class='anchor'>#</span>Package types</h3>
+        <p>When the time comes, choose your preferred package type. The price of the package will usually depend on:</p>
+        <ul>
+          <li>Service level</li>
+          <li>Standard: Standard packages typically include 3-star hotels (outside the Hajj period) in Makkah and Madinah. During the Hajj period, accommodation is usually in the Al-Muaisim camp, which is approximately a 50-minute walk from the Jamarat.</li>
+          <li>Premium: Premium packages usually offer 4-star hotels (outside the Hajj period) in Makkah and Madinah. These hotels are generally 20 to 40 minutes walking distance from the Haram. (For example, our group stayed at the VOCO Hotel, which is about a 30-minute walk from the Haram.) During the Hajj period, you are typically accommodated in the Al-Muaisim camp, around 50 minutes walking distance from the Jamarat.</li>
+          <li>Luxury: Luxury packages generally include 5-star hotels (outside the Hajj period) in Makkah and Madinah, often located next to the Haram (such as the Hilton or InterContinental). During the Hajj period, accommodation is usually in the Majar Al-Kabsh camp, which is about a 10-minute walk from the Jamarat.</li>
+        </ul>
+        <p><a href='assets/images/image5.png' target='_blank' rel='noopener'><img src='assets/images/image5.png' alt='Picture 29' loading='lazy' class='inline-img'/></a></p>
+
+        <h3 id='ii-selecting-your-hajj-package-public-vs-custom-packages'><span class='anchor'>#</span>Public vs Custom packages</h3>
+        <p>Custom packages</p>
+        <ul>
+          <li>Pre-planned itinerary (flights, dates, accommodation) arranged by the agency/provider.</li>
+          <li>You travel with the group on the same schedule.</li>
+        </ul>
+        <p>Public packages</p>
+        <ul>
+          <li>More flexible for flight dates and departure airports — you book flights yourself via Mosafer (the flight-booking tool within Nusuk, like skycanner embedded in the website).</li>
+          <li>You travel independently to Saudi Arabia.</li>
+          <li>On arrival, the provider greets you and directs you to the bus to join your group at the designated hotel.</li>
+          <li>This type of package is especially useful if your departure city isn’t served by a custom package, or if none of the available custom packages from your city meet your needs.</li>
+        </ul>
+
+        <h3 id='ii-selecting-your-hajj-package-accommodation-type'><span class='anchor'>#</span>Accommodation type</h3>
+        <ul>
+          <li>Shifting Package: With a Shifting Package, pilgrims stay at a hotel near the Haram before Hajj begins. During the core days of Hajj, they are moved to another residence or hotel near Mina (usually in the Al-Aziziyah area). After Hajj, they are returned to a hotel close to the Haram. This arrangement offers the convenience of having a nearby residence during the days in Mina, allowing you to rest or relax in a private room when needed rather than staying in the crowded and busy tents all the time.</li>
+          <li>Non-Shifting Package: In a Non-Shifting Package, pilgrims keep at the same hotel near the Haram throughout the entire journey. While this option provides more stability and avoids relocating, it becomes difficult to return to your hotel during the Hajj days, as Mina is far from the Haram (approx. 10 km, 2 to 3 hours walking) and transportation is very limited during that time (Note: you are required to sleep in Mina during the days of Hajj: please read details about the Hajj rituals).</li>
+        </ul>
+        <p>In general, shifting packages are more expensive. However, the cost can vary and may sometimes be lower than non-shifting, depending on the type of accommodation provided near Mina (e. G. , apartment or hotel), the level of comfort, and the proximity to the Mina camp.</p>
+
+        <h3 id='ii-selecting-your-hajj-package-mina-camps-al-muaisim-vs-majar-al-kabsh'><span class='anchor'>#</span>Mina camps: Al‑Muaisim vs Majar Al‑Kabsh</h3>
+        <ul>
+          <li>Majar Al-Kabsh: Located approximately a 10-minute walk from the Jamarat.</li>
+          <li>Al-Muaisim: Located about a 50-minute walk from the Jamarat.</li>
+        </ul>
+        <p>Both camps generally offer the same level of service and comfort. The main advantage of Majar Al-Kabsh is its close proximity to the Jamarat, making the daily rituals more accessible.</p>
+
+        <h3 id='ii-selecting-your-hajj-package-saudi-service-providers'><span class='anchor'>#</span>Saudi service providers</h3>
+        <p>Al-Muaisim (it is 50 minutes walking distance from the Jamarat)</p>
+        <ul>
+          <li><a href='assets/images/image6.png' target='_blank' rel='noopener'><img src='assets/images/image6.png' alt='' loading='lazy'/></a></li>
+        </ul>
+        <p>Majar Al-Kabsh (Google maps shows 24 min walking distance from Jamarat but it is 10 min walking if the road is not blocked)</p>
+        <p><a href='assets/images/image7.png' target='_blank' rel='noopener'><img src='assets/images/image7.png' alt='' loading='lazy' class='inline-img'/></a></p>
+
+        <h3 id='ii-selecting-your-hajj-package-cost'><span class='anchor'>#</span>Cost</h3>
+        <p>The cost varies depending on the options you choose:</p>
+        <ul>
+          <li>Standard, premium or luxury package</li>
+          <li>Shifting, non-shifting</li>
+          <li>The Saudi service provider (Al-Bait, Rawaf Mina, Al Rajhi, …)</li>
+          <li>Double/tripe/quadruple rooms</li>
+          <li>Direct/indirect flights</li>
+          <li>Madina/Makkh by bus or train</li>
+          <li>Mina Camps</li>
+          <li>UK agency</li>
+        </ul>
+        <p><a href='assets/images/image8.png' target='_blank' rel='noopener'><img src='assets/images/image8.png' alt='' loading='lazy' class='inline-img'/></a></p>
+        <p>According to my information, the price range in 2025 was between £5000 and £17000 per person.</p>
+        <p>If you are after an affordable package, you can get a premium package from £6000 (14 days, quadruple rooms, non-shifting, …).</p>
+
+        <!-- III. Top up your Nusuk eWallet -->
+        <h2 id='iii-top-up-your-nusuk-ewallet'><span class='anchor'>#</span>III. Top up your Nusuk eWallet</h2>
+        <ul>
+          <li>Activate your Nusuk eWallet in advance to ensure you’re ready to transfer funds as soon as the packages are released.</li>
+          <li>Your bank or card provider may charge a foreign transaction fee, which could be a fixed amount or a percentage of the total payment. It&#x27;s wise to compare options, as these fees can add up.</li>
+          <li>You may need to call your bank to authorize you to transfer large sums. Alternatively, you can transfer in multiple times to avoid getting blocked by the bank. In my case, I called the bank and informed them that I will transfer large amount and they should not block the transaction</li>
+          <li>According to Nusuk’s terms and conditions, you have the option to withdraw funds you&#x27;ve topped up in your eWallet. However, a processing fee (approximately 2. 6%) will be deducted from the refunded amount. You may need to withdraw the funds if you’re unlucky to get a package or if you have some extra money left after you purchased the package.</li>
+          <li>To check before topping up your ewalled with large amounts and transferring the entire money, it is safer to transfer a small amount (£50 or £100) and make sure it lands on the Nusuk website eWallet.</li>
+        </ul>
+
+        <!-- IV. Travel preparation -->
+        <h2 id='iv-travel-preparation-packing-checklist'><span class='anchor'>#</span>IV. Travel preparation (packing checklist)</h2>
+        <p>Table: Packing checklist</p>
+        <div class="table-wrap"><table>
+          <tr><td>□</td><td>Item</td></tr>
+          <tr><td>□</td><td>Ihram (spare set recommended)</td></tr>
+          <tr><td>□</td><td>Ihram belt</td></tr>
+          <tr><td>□</td><td>UV umbrella</td></tr>
+          <tr><td>□</td><td>Ear plugs</td></tr>
+          <tr><td>□</td><td>Neck pillow (not in Ihram)</td></tr>
+          <tr><td>□</td><td>Travel power strip</td></tr>
+          <tr><td>□</td><td>Portable luggage scale</td></tr>
+          <tr><td>□</td><td>Luggage tags</td></tr>
+          <tr><td>□</td><td>Vitamin C</td></tr>
+          <tr><td>□</td><td>Electrolyte tablets/powder</td></tr>
+          <tr><td>□</td><td>Painkillers (paracetamol, ibuprofen)</td></tr>
+          <tr><td>□</td><td>Vaseline</td></tr>
+          <tr><td>□</td><td>Slippers (break in beforehand)</td></tr>
+          <tr><td>□</td><td>Tawaf &amp; Sa’i counter</td></tr>
+          <tr><td>□</td><td>Unscented soap</td></tr>
+          <tr><td>□</td><td>Unscented deodorant</td></tr>
+          <tr><td>□</td><td>Sunscreen SPF 50</td></tr>
+          <tr><td>□</td><td>Sunglasses</td></tr>
+          <tr><td>□</td><td>Small scissors for hair (for women)</td></tr>
+          <tr><td>□</td><td>Sun visor hat (for women)</td></tr>
+        </table></div>
+        <ul>
+          <li>Take the following items with you as it brings ease to you and makes your journey easy, Insha&#x27;Allah.</li>
+          <li>Please make sure to do your own due diligence, especially with the items that potentially can affect Ihraam compliance during Umrah and Hajj!</li>
+          <li>Ihram (Saudi provider will provide one but useful to have an extra one, you can buy one from Madinah if you’re going first to Madinah, similar prices as online).</li>
+        </ul>
+
+        <!-- V. Practical advice -->
+        <h2 id='v-practical-advice'><span class='anchor'>#</span>V. Practical advice</h2>
+        <p>Package sales window — what to expect</p>
+        <ul>
+          <li>The most time-sensitive and stressful stage is when the Nusuk website opens to sell packages.</li>
+          <li>Sales were released in four phases (in 2025)</li>
+          <li>Phase 1: custom packages</li>
+          <li>Phase 2: public packages</li>
+          <li>Phase 3: any remaining worldwide places</li>
+          <li>Phase 4: cancelled places re-released</li>
+        </ul>
+        <p>In each phase, the site typically opens only for a few hours, and places sell out quickly.</p>
+        <p>Be ready</p>
+        <ul>
+          <li>Sign in 1–2 hours early and stay on the site before the sale starts.</li>
+          <li>Pre-select several packages as favourites.</li>
+          <li>Ensure your Nusuk wallet is topped up with the required amount (see the videos below for the purchase flow).</li>
+          <li>When the sale opens, click through promptly and wait for confirmation.</li>
+        </ul>
+        <p>Mindset</p>
+        <ul>
+          <li>Make du‘ā’, and if successful, perform sujūd to thank Allah.</li>
+          <li>If it doesn’t go through, don’t worry — it may simply not be your turn yet. Stay motivated for later phases or for the coming year, in shā’ Allāh.</li>
+          <li>That is how your place in Mina will likely look like:</li>
+        </ul>
+        <p>Note: Your UK agency should provide tutorials on how to book and purchase a package, run briefings or workshops on the Hajj rituals, and answer any questions you have about transport, accommodation, food, and guides.</p>
+
+        <p>Mina Camp accommodation &amp; facilities</p>
+        <ul>
+          <li>Sleeping &amp; luggage: Sofa beds in air-conditioned halls. Space is tight; pack light to avoid reducing your sleeping area.</li>
+          <li>This is how you place in Mina will most likely look like:</li>
+        </ul>
+        <p><a href='assets/images/image9.png' target='_blank' rel='noopener'><img src='assets/images/image9.png' alt='' loading='lazy' class='inline-img'/></a></p>
+        <p><a href='assets/images/image10.png' target='_blank' rel='noopener'><img src='assets/images/image10.png' alt='' loading='lazy' class='inline-img'/></a></p>
+        <ul>
+          <li>Women’s area: Separate section within the camp. Plan meet-ups at the camp entrance; allow 3–4 minutes’ walk between areas.</li>
+          <li>Meals &amp; refreshments (package-dependent): Most UK packages included three meals daily plus 24-hour snacks and drinks.</li>
+          <li>Power &amp; charging: Typically one Saudi-standard wall socket per person.</li>
+          <li>Welcome pack &amp; agency items: A backpack with essentials was issued before departure; our Saudi agency (Rawaf Mina) also provided a bag for the Mina days (and umbrellas).</li>
+        </ul>
+        <p><a href='assets/images/image11.png' target='_blank' rel='noopener'><img src='assets/images/image11.png' alt='' loading='lazy' class='inline-img'/></a></p>
+
+        <p>Travel &amp; logistics</p>
+        <p>Inter-city: Madinah → Makkah (train vs coach)</p>
+        <ul>
+          <li>Package included a coach, but we chose the train.</li>
+          <li>Coach: ~10 hours (traffic and multiple checks entering Makkah).</li>
+          <li>Train: 2. 5 hours, £35 per person, very punctual — arrive early.</li>
+          <li>Tickets: Bought a few weeks in advance.</li>
+          <li>Baggage: Expect a ~23 kg limit; oversized bags may be redirected via Saudi Post for later collection. We sent our main luggage with the Hajj agency by coach and travelled light on the train.</li>
+          <li>Arriving early let us check in, perform ‘Umrah, then rest. Recommendation: Where suitable, the train is strongly recommended.</li>
+        </ul>
+        <p>Local transfers (stations ↔ hotels)</p>
+        <ul>
+          <li>Madinah: Used Uber from hotel to train station.</li>
+          <li>Makkah: Uber showed a 30-minute wait, so we used a station taxi (SAR 50 vs ~SAR 30 on Uber).</li>
+          <li>Note: There is reportedly a direct bus (7A) from the train station to al-Haram.</li>
+        </ul>
+        <p>Eid day: Jamarat ↔ al-Haram</p>
+        <ul>
+          <li>Used public shuttle from Jamarat → al-Haram (al-Ghazah parking) for Tawaf; not included in our package (many packages exclude this on Eid).</li>
+          <li>Buses were frequent, but finding the stop is tricky; some people walked up to three hours after missing it.</li>
+          <li>Return bus stalled mid-route due to congestion; we switched to the train (about 30 minutes’ walk from our camp). Tip: Plan public transport in advance to minimise long walks; check if train is feasible Jamarat ↔ Mina.</li>
+        </ul>
+
+        <p>Stay &amp; comfort</p>
+        <p>Muzdalifah (sleeping spot)</p>
+        <ul>
+          <li>Avoid sleeping near the main door — constant foot traffic disturbed rest.</li>
+        </ul>
+        <p>Toilets &amp; showers</p>
+        <ul>
+          <li>Expect crowds ~30 minutes before prayers — avoid these times where possible.</li>
+          <li>Roughly 9/10 toilets encountered were squat toilets; seated toilets had much longer queues (risk of missing prayers). Similar in ‘Arafah, Muzdalifah, Masjid al-Haram, Masjid an-Nabawi, and Qubā’.</li>
+          <li>Many cubicles were toilet-showers; there were separate showers too.</li>
+          <li>A waterproof bag is useful to hang clothes inside the shower door.</li>
+          <li>Bring scent-free soap.</li>
+        </ul>
+        <p>Hydration, heat &amp; sun</p>
+        <ul>
+          <li>Hydrate frequently; shower when possible.</li>
+          <li>For walks &gt;20 minutes (e. G. , to Jamarat, during Tawaf or Sa’i), carry water and, if available, a spray bottle to cool your body (ours were provided by Rawaf).</li>
+          <li>Use sun cream before going out; sunglasses are essential.</li>
+          <li>A UV umbrella helps; agencies (UK and Rawaf Mina) provided umbrellas, or bring your own.</li>
+        </ul>
+        <p>Medication &amp; medical access</p>
+        <ul>
+          <li>Bring enough medication; pharmacies are widespread (possibly not inside Mina camps).</li>
+          <li>Doctors were available in Mina camps for urgent needs.</li>
+        </ul>
+        <p>Ihram &amp; clothing</p>
+        <ul>
+          <li>We bought Ihram online; Rawaf Mina also provided an Ihram in Madinah before travelling to Makkah.</li>
+          <li>If your Ihram is still clean, keep using it; carry a spare just in case.</li>
+        </ul>
+        <p>Footwear, fitness &amp; sleep</p>
+        <ul>
+          <li>Break in slippers with longer walks before Hajj to reduce blisters.</li>
+          <li>Aim to walk 1 hour daily for 10 days pre-departure; arrive as fit as you can (weight loss may help if overweight).</li>
+          <li>Earplugs are very helpful in Mina if you’re a light sleeper.</li>
+        </ul>
+
+        <p>Hotels, water &amp; food</p>
+        <p>Hotel proximity &amp; shuttles (Makkah)</p>
+        <ul>
+          <li>Our Makkah (Voco) hotel was ~30 minutes’ walk to al-Haram.</li>
+          <li>Shuttles ran for the first two days, then stopped due to government restrictions as Hajj neared and roads crowded.</li>
+          <li>Walk was manageable for Maghrib and ‘Ishā’, harder for Dhuhr and ‘Asr.</li>
+          <li>A large prayer room with congregational prayers was available.</li>
+        </ul>
+        <p>Water</p>
+        <ul>
+          <li>Widely available, especially around al-Haram; charities distribute it free.</li>
+          <li>Always carry at least one bottle from the hotel.</li>
+          <li>The only shortfall we met was returning from Jamarat when a diversion lengthened the route.</li>
+        </ul>
+        <p>Food</p>
+        <ul>
+          <li>Makkah hotel: Breakfast and dinner good; often skipped lunch or bought shawarma en route to al-Haram.</li>
+          <li>Madinah hotel: Breakfast and dinner acceptable but slightly lower quality.</li>
+          <li>Mina &amp; ‘Arafah: Food tents; quality okay, limited seating — often easier to eat in your tent.</li>
+          <li>Mina &amp; ‘Arafah: Fridges with cold water and 24/7 snacks/tea/coffee/noodles (noodles ran out in ‘Arafah before Muzdalifah).</li>
+          <li>Muzdalifah arrival: each person received a small bag with snacks and water.</li>
+          <li>Mina meals: three meals daily via a nearby restaurant tent; quality fine.</li>
+        </ul>
+
+        <p>Navigating the Haram (Tawaf by floor)</p>
+        <ul>
+          <li>1st floor: access via Gate 79 / Gate 1 (do not go down the escalator). Often the best view of the Ka‘bah.</li>
+          <li>2nd floor: via the wheelchair ramp.</li>
+          <li>2. 5 floor: electric scooters only (enter from the 2nd floor).</li>
+          <li>3rd floor (roof): via escalators.</li>
+        </ul>
+
+        <p>Key compliance note (from source)</p>
+        <ul>
+          <li>During the days of Hajj, ensure you spend more than half the night within Mina’s boundaries.</li>
+        </ul>
+
+        <p>Medical advice for pilgrims during Hajj</p>
+        <p>Personal medical kit</p>
+        <ul>
+          <li>Paracetamol, anti-diarrhoeal (e. G. , Imodium), plasters and disinfectant (e. G. , Betadine), skin-irritation cream (e. G. , Bepanthen), sunscreen, lip balm, hand sanitiser, wet wipes, personal medications with prescriptions.</li>
+        </ul>
+        <p>Prevent common illnesses</p>
+        <ul>
+          <li>Drink water regularly, even if not thirsty; sun protection (hat, sunglasses, wet towel); maintain hand/foot/personal hygiene.</li>
+        </ul>
+        <p>Foot care</p>
+        <ul>
+          <li>Wear open, comfortable, well-broken-in shoes; talcum powder to avoid chafing; treat blisters promptly; keep feet clean and dry.</li>
+        </ul>
+        <p>Avoid physical exhaustion</p>
+        <ul>
+          <li>Walk slowly at your pace; rest in shade when possible; watch for heat-stroke signs (headache, nausea, dizziness) and inform a guide immediately.</li>
+        </ul>
+        <p>Chronic illnesses</p>
+        <ul>
+          <li>Bring enough medication for the entire stay; keep treatment with you; inform a guide about your condition.</li>
+        </ul>
+        <p>Diabetic pilgrims using insulin</p>
+        <ul>
+          <li>Carry insulin in an insulated pouch; keep snacks/fast-acting sugar for hypos; monitor blood sugar regularly; inform a team member.</li>
+        </ul>
+        <p>If you feel unwell</p>
+        <ul>
+          <li>Do not stay alone; notify a guide immediately; go to a medical station promptly.</li>
+        </ul>
+
+        <p>Organisational advice for the five days</p>
+        <ul>
+          <li>Patience &amp; brotherhood: Crowds, heat and waiting are part of the test; prioritise respect, mutual support, and the group’s well-being.</li>
+          <li>Follow your leaders: Guides are experienced; follow instructions and stay with your group (e. G. , Mina → ‘Arafah → Muzdalifah).</li>
+          <li>Take turns &amp; stay orderly: For tents, toilets, showers, meals, queue patiently; bring a small personal kit (wipes, sanitiser, basics).</li>
+          <li>Manage effort wisely: Walk at a steady pace, hydrate, and rest whenever possible.</li>
+          <li>Spiritual focus: Turn delays and discomfort into worship — make du‘ā’, dhikr, read Qur’an, reflect on Hajj’s meanings.</li>
+          <li>Living well in tents: Space is limited — keep noise low, stay tidy, organise belongings, share fairly, and accept minor inconveniences with sabr.</li>
+        </ul>
+
+        <!-- VI. Hajj rituals -->
+        <h2 id='vi-hajj-rituals'><span class='anchor'>#</span>VI. Hajj rituals</h2>
+        <p>This section offers a high-level overview only. For a fuller understanding, read widely and watch as many relevant videos as you can.</p>
+        <p>This book was particularly useful for me:</p>
+        <ul>
+          <li dir="rtl" lang="ar">مناسك الحج والعمرة في الإسلام في ضوء الكتاب والسنة</li>
+        </ul>
+        <p dir="rtl" lang="ar">( سعيد بن على بن وهف القحطاني) noor-book.com/كتاب-مناسك-الحج-والعمرة-في-الإسلام-في-ضوء-الكتاب-والسنة-pdf</p>
+        <p><a href='assets/images/image12.png' target='_blank' rel='noopener'><img src='assets/images/image12.png' alt='Picture 3' loading='lazy' class='inline-img'/></a></p>
+        <p><a href='assets/images/image13.png' target='_blank' rel='noopener'><img src='assets/images/image13.png' alt='' loading='lazy' class='inline-img'/></a></p>
+        <p><a href='assets/images/image14.png' target='_blank' rel='noopener'><img src='assets/images/image14.png' alt='' loading='lazy' class='inline-img'/></a></p>
+
+        <!-- VII. Videos -->
+        <h2 id='vii-videos-additional-materials-questions-to-expect'><span class='anchor'>#</span>VII. Videos &amp; additional materials &amp; Questions to expect</h2>
+        <ul>
+          <li>Https: //www. Youtube. Com/watch? V=JXSPmyK0P4k</li>
+          <li>Https: //www. Youtube. Com/watch? V=TD9FHmBCz5k&amp;list=PL4C0FD26ABA759D1E</li>
+          <li>Https: //m. Youtube. Com/shorts/XF5Gg8Hw9bI</li>
+          <li>Https: //youtu. Be/OLIcIvwMTJM? Si=gSYPGKT19ECb4kzK</li>
+          <li>Https: //www. Youtube. Com/watch? V=wik5QQA1zRo</li>
+          <li>Https: //www. Facebook. Com/share/v/1C2gJqGkiE/? Mibextid=wwXIfr</li>
+          <li>Https: //youtu. Be/YihoTBfkO9Q? Si=jAaGWWK4ktL2PHKn</li>
+          <li>Https: //www. Youtube. Com/watch? V=SNyLksy8DNE</li>
+          <li>Https: //www. Youtube. Com/watch? V=hb2KwtxJpj8</li>
+          <li>Https: //www. Youtube. Com/watch? V=1Gakh8sX5OE</li>
+          <li>Https: //www. Youtube. Com/watch? V=9thMVV4yM3Y</li>
+          <li>Https: //www. Youtube. Com/watch? V=JdFb3VIJv1A</li>
+          <li>Https: //www. Youtube. Com/watch? V=7rivZ04c2X4</li>
+          <li>Https: //www. Youtube. Com/watch? V=uEYbApEqmP0</li>
+          <li>Https: //www. Youtube. Com/watch? V=7nzL4Sjd3Dc</li>
+          <li>Https: //www. Youtube. Com/watch? V=D7aV3S7zqsY</li>
+          <li>Https: //www. Youtube. Com/watch? V=rl2jjjROIFQ</li>
+        </ul>
+        <p>Facebook pages you can join/follow:</p>
+        <ul>
+          <li>Https: //www. Facebook. Com/groups/3339103619645976</li>
+          <li>Https: //www. Facebook. Com/NusukHajj</li>
+        </ul>
+        <p>Fiqh questions to confirm in advance (from your source)</p>
+        <p>Please note: these are topics to clarify with your scholar/group imam. No new rulings are added here.</p>
+        <p>Muzdalifah</p>
+        <ul>
+          <li>Early departure: Confirm if/when leaving Muzdalifah early is permitted in your circumstances and what the minimum stay should be.</li>
+        </ul>
+        <p>Mina</p>
+        <ul>
+          <li>Length of stay: Ask whether you should remain in Mina for two or three days</li>
+        </ul>
+        <p>Jamarat (stoning)</p>
+        <ul>
+          <li>Throwing times: Confirm the permissible times for stoning on each day (e. G. , whether before Dhuhr or after Maghrib is allowed for you).</li>
+          <li>Delegation: Ask if/when women (or others) may delegate the stoning and how to do this correctly.</li>
+        </ul>
+        <p>After Tawaf al-Wadā‘ (Farewell Tawaf)</p>
+        <ul>
+          <li>Clarify what you may do after completing Tawaf al-Wadā‘ while awaiting transport (e. G. , shopping, praying another prayer, waiting in a designated area), and what would invalidate it.</li>
+        </ul>
+        <p>Ihram &amp; cleanliness</p>
+        <ul>
+          <li>Confirm the rules on scented products during Ihram (e. G. , soap, deodorant) and how to clean the Ihram if needed.</li>
+        </ul>
+        <p>Delays or missed actions</p>
+        <ul>
+          <li>If you miss something due to traffic or organisational issues, confirm what to do next (e. G. , required make-ups or other actions).</li>
+          <li>Practical tip: take the contact details of a trusted imam before travel.</li>
+        </ul>
+        <p>On-site fatwa support</p>
+        <ul>
+          <li>You can seek guidance inside Masjid al-Haram and Masjid an-Nabawi at fatwa booths/phones, typically with translators available.</li>
+        </ul>
+
+        <!-- VIII. Duas -->
+        <h2 id='viii-duas'><span class='anchor'>#</span>VIII. Duas</h2>
+        <p>A lot of Duas available online. Prepare as much as you can especially for the day of Arafah. Some of the main useful Duas below:</p>
+        <p><a href='assets/images/image15.png' target='_blank' rel='noopener'><img src='assets/images/image15.png' alt='' loading='lazy' class='inline-img'/></a></p>
+        <p><a href='assets/images/image16.png' target='_blank' rel='noopener'><img src='assets/images/image16.png' alt='' loading='lazy' class='inline-img'/></a></p>
+        <p><a href='assets/images/image17.png' target='_blank' rel='noopener'><img src='assets/images/image17.png' alt='' loading='lazy' class='inline-img'/></a></p>
+        <p><a href='assets/images/image18.png' target='_blank' rel='noopener'><img src='assets/images/image18.png' alt='' loading='lazy' class='inline-img'/></a></p>
+        <p><a href='assets/images/image19.png' target='_blank' rel='noopener'><img src='assets/images/image19.png' alt='' loading='lazy' class='inline-img'/></a></p>
+        <p><a href='assets/images/image20.png' target='_blank' rel='noopener'><img src='assets/images/image20.png' alt='' loading='lazy' class='inline-img'/></a></p>
+        <p><a href='assets/images/image21.png' target='_blank' rel='noopener'><img src='assets/images/image21.png' alt='' loading='lazy' class='inline-img'/></a></p>
+        <p><a href='assets/images/image22.png' target='_blank' rel='noopener'><img src='assets/images/image22.png' alt='' loading='lazy' class='inline-img'/></a></p>
+      </article>
+    </div>
+
+    <footer>
+      <p>&copy; 2025 Abdellatif Salah &amp; Manel Ibrahim. Always confirm time-sensitive details on official sources.</p>
+    </footer>
+  </div>
+</body>
+</html>

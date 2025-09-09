@@ -27,8 +27,34 @@
   .grid{display:grid;grid-template-columns:300px 1fr;gap:1.25rem}
   @media (max-width:980px){.grid{grid-template-columns:1fr}}
 
-  nav.toc{position:sticky;top:1rem;align-self:start;background:var(--card);border:1px solid var(--border);border-radius:14px;padding:1rem;max-height:80vh;overflow:auto}
-  nav.toc h2{font-size:1rem;margin:.25rem 0 .75rem;color:var(--muted);letter-spacing:.02em;text-transform:uppercase}
+/* Desktop/Large screens: keep sticky, allow internal scroll */
+nav.toc{
+  position: sticky;
+  top: 1rem;
+  align-self: start;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 1rem;
+  max-height: 80vh;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch; /* iOS momentum scrolling */
+  z-index: 1; /* ensure it doesn't get overlapped weirdly */
+}
+
+/* Mobile/Tablet: let the nav scroll with the page (no sticky) */
+@media (max-width: 980px){
+  .grid{ grid-template-columns: 1fr; } /* you already have this */
+  nav.toc{
+    position: static;   /* turn off sticky */
+    top: auto;
+    max-height: none;   /* expand naturally */
+    overflow: visible;  /* no inner scroll area that traps touch */
+  }
+  /* optional: smaller anchor offset since there's no sticky element now */
+  article h2, article h3, article h4{ scroll-margin-top: 16px; }
+}
+
   .toc-list{list-style:none;margin:0;padding:0}
   .toc-list > li.sec{margin:.35rem 0}
   .toc-list a{display:flex;align-items:center;gap:.5rem;color:var(--fg)}

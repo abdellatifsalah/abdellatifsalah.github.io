@@ -46,4 +46,486 @@
   /* Desktop: sticky with internal scroll */
   @media (min-width:981px){
     nav.toc{
-      position:sticky; top:12p
+      position:sticky; top:12px; align-self:start; max-height:80vh; overflow:auto;
+      -webkit-overflow-scrolling:touch; overscroll-behavior:contain; z-index:1;
+    }
+  }
+  /* Mobile: normal flow so it scrolls with page and never hides content */
+  @media (max-width:980px){
+    nav.toc{ position:static; max-height:none; overflow:visible; }
+  }
+  nav.toc h2{font-size:.95rem;margin:.25rem 0 .75rem;color:var(--muted);letter-spacing:.02em;text-transform:uppercase}
+  .toc-list{list-style:none;margin:0;padding:0}
+  .toc-list > li.sec{margin:.35rem 0}
+  .toc-list a{
+    display:flex; align-items:center; gap:.55rem; color:var(--fg);
+    padding:.25rem .25rem; border-radius:8px; min-height:36px;
+  }
+  .toc-list a:focus-visible{outline:2px solid var(--brand);outline-offset:2px}
+  .toc-list .sublist{list-style:none;margin:.25rem 0 .35rem 1.25rem;padding:0}
+  .dot{display:inline-block;width:.6rem;height:.6rem;border-radius:999px;border:2px solid var(--border); flex:0 0 .6rem}
+  .sec-dot{background:var(--h2)} .sub-dot{background:var(--h3)}
+  li.sub a{font-size:.95rem;color:var(--muted)}
+  li.sub a:hover{color:var(--fg)}
+
+  article{
+    background:var(--card);border:1px solid var(--border);border-radius:var(--radius);
+    padding:clamp(12px,3.8vw,20px);
+    word-break:normal; overflow-wrap:break-word; hyphens:auto;
+  }
+  /* Anchor offset so headings don't hide under sticky TOC (desktop only) */
+  article h2, article h3, article h4{scroll-margin-top:96px}
+  @media (max-width:980px){ article h2, article h3, article h4{scroll-margin-top:18px} }
+
+  article h2{
+    font-size:clamp(1.6rem,4.2vw,2.2rem); margin-top:1.4rem;
+    border-left:8px solid var(--h2); padding-left:.65rem; color:var(--h2); line-height:1.25;
+  }
+  article h3{
+    font-size:clamp(1.25rem,3.5vw,1.6rem); margin-top:1.1rem;
+    border-left:5px solid var(--h3); padding-left:.6rem; color:var(--h3); line-height:1.3;
+  }
+  article h2 .anchor, article h3 .anchor{margin-right:.5rem;color:var(--muted)}
+  article p{margin:.6rem 0}
+  ul{margin:.6rem 0 .6rem 1.25rem}
+  li+li{margin-top:.15rem}
+
+  .note{
+    background: rgba(14,165,233,.08);
+    border:1px solid var(--border);
+    border-left:4px solid var(--brand);
+    padding:.6rem .7rem; border-radius:10px; color:var(--fg);
+    margin:.7rem 0;
+  }
+  .med-note{background: rgba(134,239,172,.12); border-left-color:#10b981}
+
+  .doc-image, .doc-image img{display:block;max-width:100%}
+  .doc-image{background:var(--bg);border:1px solid var(--border);border-radius:12px;overflow:hidden;margin:.8rem 0}
+  .doc-image figcaption{font-size:.9rem;color:var(--muted);padding:.4rem .6rem;border-top:1px solid var(--border)}
+  .inline-img{max-height:280px;vertical-align:middle;border:1px solid var(--border);border-radius:6px}
+
+  .table-wrap{overflow-x:auto;margin:.9rem 0;-webkit-overflow-scrolling:touch}
+  table{border-collapse:collapse;width:100%;min-width:420px}
+  td,th{border:1px solid var(--border);padding:.55rem .6rem;vertical-align:top}
+  td:first-child{width:2.2rem}
+
+  footer{color:var(--muted);font-size:.95rem;padding:1.25rem 0}
+  .chip{display:inline-block;padding:.2rem .6rem;border:1px solid var(--border);border-radius:999px;font-size:.85rem;background:var(--bg)}
+  :target{background:rgba(14,165,233,0.08)}
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <header class="hero">
+      <h1>Hajj Experience from UK</h1>
+      <p>Practical notes and tips for first-time pilgrims travelling from the UK. <span class="chip">Last built 2025-09-09</span></p>
+    </header>
+
+    <div class="grid">
+      <nav class="toc" aria-label="On this page">
+        <h2>Navigation</h2>
+        <ul class="toc-list">
+          <li class="sec"><a href="#introduction"><span class="dot sec-dot"></span>Introduction</a></li>
+          <li class="sec"><a href="#i-registration-on-the-nusuk-website"><span class="dot sec-dot"></span>I. Registration on the Nusuk website</a>
+            <ul class="sublist">
+              <li class="sub"><a href="#i-registration-on-the-nusuk-website-registration-steps"><span class="dot sub-dot"></span>Registration steps</a></li>
+              <li class="sub"><a href="#i-registration-on-the-nusuk-website-profile-verification"><span class="dot sub-dot"></span>Profile verification</a></li>
+            </ul>
+          </li>
+          <li class="sec"><a href="#ii-selecting-your-hajj-package"><span class="dot sec-dot"></span>II. Selecting your Hajj package</a>
+            <ul class="sublist">
+              <li class="sub"><a href="#ii-selecting-your-hajj-package-package-types"><span class="dot sub-dot"></span>Package types</a></li>
+              <li class="sub"><a href="#ii-selecting-your-hajj-package-service-level"><span class="dot sub-dot"></span>Service level</a></li>
+              <li class="sub"><a href="#ii-selecting-your-hajj-package-public-vs-custom-packages"><span class="dot sub-dot"></span>Public vs Custom packages</a></li>
+              <li class="sub"><a href="#ii-selecting-your-hajj-package-accommodation-type"><span class="dot sub-dot"></span>Accommodation type</a></li>
+              <li class="sub"><a href="#ii-selecting-your-hajj-package-mina-camps-al-muaisim-vs-majar-al-kabsh"><span class="dot sub-dot"></span>Mina camps</a></li>
+              <li class="sub"><a href="#ii-selecting-your-hajj-package-saudi-service-providers"><span class="dot sub-dot"></span>Saudi service providers</a></li>
+              <li class="sub"><a href="#ii-selecting-your-hajj-package-cost"><span class="dot sub-dot"></span>Cost</a></li>
+            </ul>
+          </li>
+          <li class="sec"><a href="#iii-top-up-your-nusuk-ewallet"><span class="dot sec-dot"></span>III. Top up your Nusuk eWallet</a></li>
+          <li class="sec"><a href="#iv-travel-preparation-packing-checklist"><span class="dot sec-dot"></span>IV. Travel preparation</a></li>
+          <li class="sec"><a href="#v-practical-advice"><span class="dot sec-dot"></span>V. Practical advice</a></li>
+          <li class="sec"><a href="#vi-hajj-rituals"><span class="dot sec-dot"></span>VI. Hajj rituals</a></li>
+          <li class="sec"><a href="#vii-videos-additional-materials-questions-to-expect"><span class="dot sec-dot"></span>VII. Videos & materials</a></li>
+          <li class="sec"><a href="#viii-duas"><span class="dot sec-dot"></span>VIII. Duas</a></li>
+        </ul>
+      </nav>
+
+      <article>
+        <!-- Front matter -->
+        <p>Hajj Experience from UK</p>
+        <p>This document is useful for first-time pilgrims travelling from the United Kingdom.</p>
+        <p>Authors: Abdellatif Salah &amp; Manel Ibrahim</p>
+        <p>Email us for any questions or additional information: abdellatif.Salah@gmail.com</p>
+
+        <!-- Introduction -->
+        <h2 id="introduction"><span class="anchor">#</span>Introduction</h2>
+        <p dir="rtl" lang="ar">بسم الله الرحمن الرحيم</p>
+        <p dir="rtl" lang="ar">الحمد لله الذي بنعمته تتم الصالحات</p>
+        <p dir="rtl" lang="ar">الحمد لله الذي أكرمنا بنعمة الحج، ونسأله سبحانه أن يتقبل منا أعمالنا، ويغفر لنا ذنوبنا، ويزيدنا قربًا منه وطاعةً له. اللهم لك الحمد والشكر كما يليق بجلال وجهك وعظيم سلطانك، نحمدك ونشكرك ونسألك أن نكون من التائبين المقبولين، وأن تغفر لنا جميع ذنوبنا، يا أرحم الراحمين.</p>
+        <p dir="rtl" lang="ar">نسأل الله أن يرزق من لم يحج بعد الحج عاجلاً غير آجل، وأن يرزق من حجّ زيارةً لبيته قريبا</p>
+        <p>In the name of Allah, the Most Gracious, the Most Merciful.</p>
+        <p>All praise is due to Allah, by whose grace righteous deeds are completed.</p>
+        <p>All praise is due to Allah, who has honored us with the blessing of Hajj…</p>
+        <p>This page offers an overview of my Hajj experience with my wife… Please verify time-sensitive details via official sources.</p>
+
+        <!-- I. Registration -->
+        <h2 id="i-registration-on-the-nusuk-website"><span class="anchor">#</span>I. Registration on the Nusuk website</h2>
+        <p>Visit the official Nusuk Hajj portal: https://hajj.nusuk.sa. This is the central platform for managing your Hajj application and approval.</p>
+
+        <h3 id="i-registration-on-the-nusuk-website-registration-steps"><span class="anchor">#</span>Registration steps</h3>
+        <ul>
+          <li>Step 1: Create an account on the Nusuk Hajj portal.</li>
+          <li>Step 2: Upload your required documents (passport and photo).</li>
+          <li>Step 3: Complete the application form.</li>
+          <li>Your application will then be submitted for official verification.</li>
+        </ul>
+        <p>Once submitted, you may need to wait a few days to a few weeks for approval…</p>
+
+        <p><strong>Your passport</strong></p>
+        <p>Get a clear copy of the main biometric page of your passport ready…</p>
+        <ul>
+          <li>Accepted file formats: PNG or JPG</li>
+          <li>Maximum dimensions: 800 × 400 pixels</li>
+          <li>Maximum file size: 1 MB</li>
+        </ul>
+        <p><a href="assets/images/image1.png" target="_blank" rel="noopener"><img src="assets/images/image1.png" alt="Passport page example" loading="lazy" class="inline-img"/></a></p>
+
+        <p><strong>Passport photo</strong></p>
+        <p>Take a clear photo of yourself using your phone or camera.</p>
+        <ul>
+          <li>Format: PNG or JPG</li>
+          <li>Size: 200 × 200 pixels, max 18 KB</li>
+          <li>Background: White</li>
+          <li>Clothing: Modest attire</li>
+        </ul>
+        <p><a href="assets/images/image2.png" target="_blank" rel="noopener"><img src="assets/images/image2.png" alt="Photo example" loading="lazy" class="inline-img"/></a></p>
+
+        <p><strong>And if applicable:</strong></p>
+        <ul><li>Your digital copy of your BRP (Biometric Residence Permit)</li></ul>
+        <p><a href="assets/images/image3.png" target="_blank" rel="noopener"><img src="assets/images/image3.png" alt="BRP example" loading="lazy" class="inline-img"/></a></p>
+
+        <h3 id="i-registration-on-the-nusuk-website-profile-verification"><span class="anchor">#</span>Profile verification</h3>
+        <p>Verification typically begins ~6 months before Hajj… Always confirm current dates on official sources.</p>
+        <p dir="rtl" lang="ar">… سيتم إرسال بريد إلكتروني بعنوان “Audit has been Completed” من العنوان: no_reply@hajj.nusuk.sa</p>
+        <p><strong>Important notes:</strong></p>
+        <ul>
+          <li>If your profile hasn’t been verified yet, don’t worry…</li>
+          <li>If there is an issue, you’ll be asked to correct and resubmit.</li>
+          <li>You can contact support; phone charges apply.</li>
+        </ul>
+        <p><a href="assets/images/image4.png" target="_blank" rel="noopener"><img src="assets/images/image4.png" alt="Nusuk verification" loading="lazy" class="inline-img"/></a></p>
+
+        <!-- II. Selecting your Hajj package -->
+        <h2 id="ii-selecting-your-hajj-package"><span class="anchor">#</span>II. Selecting your Hajj package</h2>
+        <p>Once your profile has been verified, log into Nusuk Hajj and…</p>
+
+        <h3 id="ii-selecting-your-hajj-package-package-types"><span class="anchor">#</span>Package types</h3>
+        <p>Price depends on:</p>
+        <ul>
+          <li>Service level (Standard / Premium / Luxury)</li>
+          <li>Shifting vs Non-shifting</li>
+          <li>Saudi service provider</li>
+          <li>Room occupancy</li>
+          <li>Flights & transport choices</li>
+        </ul>
+        <p><a href="assets/images/image5.png" target="_blank" rel="noopener"><img src="assets/images/image5.png" alt="Package examples" loading="lazy" class="inline-img"/></a></p>
+
+        <h3 id="ii-selecting-your-hajj-package-public-vs-custom-packages"><span class="anchor">#</span>Public vs Custom packages</h3>
+        <p><strong>Custom packages</strong></p>
+        <ul>
+          <li>Pre-planned itinerary by the provider; travel with the group.</li>
+        </ul>
+        <p><strong>Public packages</strong></p>
+        <ul>
+          <li>More flexible; book flights via Mosafer; travel independently to KSA.</li>
+        </ul>
+
+        <h3 id="ii-selecting-your-hajj-package-accommodation-type"><span class="anchor">#</span>Accommodation type</h3>
+        <ul>
+          <li><strong>Shifting:</strong> hotel near Haram → residence near Mina during Hajj → hotel near Haram after.</li>
+          <li><strong>Non-shifting:</strong> same hotel near Haram throughout; harder to access during Mina days.</li>
+        </ul>
+
+        <h3 id="ii-selecting-your-hajj-package-mina-camps-al-muaisim-vs-majar-al-kabsh"><span class="anchor">#</span>Mina camps: Al-Muaisim vs Majar Al-Kabsh</h3>
+        <ul>
+          <li><strong>Majar Al-Kabsh:</strong> ~10-min walk from Jamarat.</li>
+          <li><strong>Al-Muaisim:</strong> ~50-min walk from Jamarat.</li>
+        </ul>
+
+        <h3 id="ii-selecting-your-hajj-package-saudi-service-providers"><span class="anchor">#</span>Saudi service providers</h3>
+        <p>Al-Muaisim (~50 minutes to Jamarat)</p>
+        <ul><li><a href="assets/images/image6.png" target="_blank" rel="noopener"><img src="assets/images/image6.png" alt="Muaisim map" loading="lazy"/></a></li></ul>
+        <p>Majar Al-Kabsh (Google Maps shows 24 minutes; usually ~10 if roads are open)</p>
+        <p><a href="assets/images/image7.png" target="_blank" rel="noopener"><img src="assets/images/image7.png" alt="Majar map" loading="lazy" class="inline-img"/></a></p>
+
+        <h3 id="ii-selecting-your-hajj-package-cost"><span class="anchor">#</span>Cost</h3>
+        <p>Depends on chosen options… 2025 range: ~£5,000–£17,000 pp; premium from ~£6,000 (example).</p>
+        <p><a href="assets/images/image8.png" target="_blank" rel="noopener"><img src="assets/images/image8.png" alt="Cost examples" loading="lazy" class="inline-img"/></a></p>
+
+        <!-- III. Top up your Nusuk eWallet -->
+        <h2 id="iii-top-up-your-nusuk-ewallet"><span class="anchor">#</span>III. Top up your Nusuk eWallet</h2>
+        <ul>
+          <li>Activate your eWallet in advance.</li>
+          <li>Check foreign transaction fees.</li>
+          <li>Large transfers: warn your bank; split if needed.</li>
+          <li>Refunds possible (processing fee ~2.6%).</li>
+          <li>Test with a small amount (£50–£100) before topping up fully.</li>
+        </ul>
+
+        <!-- IV. Travel preparation -->
+        <h2 id="iv-travel-preparation-packing-checklist"><span class="anchor">#</span>IV. Travel preparation (packing checklist)</h2>
+        <p>Table: Packing checklist</p>
+        <div class="table-wrap">
+          <table>
+            <tr><th>□</th><th>Item</th></tr>
+            <tr><td>□</td><td>Ihram (spare set recommended)</td></tr>
+            <tr><td>□</td><td>Ihram belt</td></tr>
+            <tr><td>□</td><td>UV umbrella</td></tr>
+            <tr><td>□</td><td>Ear plugs</td></tr>
+            <tr><td>□</td><td>Neck pillow (not in Ihram)</td></tr>
+            <tr><td>□</td><td>Travel power strip</td></tr>
+            <tr><td>□</td><td>Portable luggage scale</td></tr>
+            <tr><td>□</td><td>Luggage tags</td></tr>
+            <tr><td>□</td><td>Vitamin C</td></tr>
+            <tr><td>□</td><td>Electrolyte tablets/powder</td></tr>
+            <tr><td>□</td><td>Painkillers (paracetamol, ibuprofen)</td></tr>
+            <tr><td>□</td><td>Vaseline</td></tr>
+            <tr><td>□</td><td>Slippers (break in beforehand)</td></tr>
+            <tr><td>□</td><td>Tawaf &amp; Sa’i counter</td></tr>
+            <tr><td>□</td><td>Unscented soap</td></tr>
+            <tr><td>□</td><td>Unscented deodorant</td></tr>
+            <tr><td>□</td><td>Sunscreen SPF 50</td></tr>
+            <tr><td>□</td><td>Sunglasses</td></tr>
+            <tr><td>□</td><td>Small scissors for hair (for women)</td></tr>
+            <tr><td>□</td><td>Sun visor hat (for women)</td></tr>
+          </table>
+        </div>
+        <ul>
+          <li>Take the following items with you…</li>
+          <li>Do your own due diligence for Ihram compliance…</li>
+        </ul>
+
+        <!-- V. Practical advice -->
+        <h2 id="v-practical-advice"><span class="anchor">#</span>V. Practical advice</h2>
+        <p><strong>Package sales window — what to expect</strong></p>
+        <ul>
+          <li>The most time-sensitive stage is when packages go live on Nusuk.</li>
+          <li>Phased releases (example 2025): custom → public → remaining → re-releases.</li>
+          <li>Windows can be short; places sell fast.</li>
+        </ul>
+        <p><strong>Be ready</strong></p>
+        <ul>
+          <li>Sign in early; shortlist packages; ensure your eWallet is ready.</li>
+        </ul>
+        <p><strong>Mindset</strong></p>
+        <ul>
+          <li>Make du‘ā’; be patient; keep trying across phases.</li>
+        </ul>
+
+        <!-- NEW: Children, Elderly & Accessibility guidance -->
+        <h3><span class="anchor">#</span>Children, Elderly &amp; Accessibility — Hajj Guidance</h3>
+
+        <h4>Children (Hajj 2025)</h4>
+        <ul>
+          <li><strong>Children under 12 are not accepted for Hajj 2025.</strong> The organising body (Saudi Ministry of Hajj &amp; Umrah) said this step is <em>“to ensure the safety and well-being of children and to mitigate any potential harm during the Hajj pilgrimage.”</em></li>
+          <li><strong>Check future seasons</strong> for updates, as rules can change year to year.</li>
+        </ul>
+
+        <h4>Travelling with Elderly Parents</h4>
+        <ul>
+          <li><strong>Be realistic:</strong> Hajj with elderly parents is challenging and requires considerable patience and energy. They may depend on you for nearly everything—remember the reward for serving them.</li>
+          <li><strong>Fitness matters:</strong> Hajj is physically demanding and should be performed by those fit enough to complete the rites.</li>
+        </ul>
+
+        <h4>Obligation (Fard) &amp; Ability</h4>
+        <ul>
+          <li>The Qur’an obligates Hajj only on those who are <strong>physically and financially capable</strong>.</li>
+          <li>If someone has a <strong>chronic illness or permanent disability</strong> that prevents them from performing Hajj, <strong>Hajj is not obligatory</strong> for them.</li>
+          <li>If a person is <strong>financially able but physically unable</strong>, consult a trusted scholar about <strong>Hajj al-Badal (proxy Hajj)</strong>.</li>
+        </ul>
+
+        <h4>Disabled / Differently-Abled Pilgrims</h4>
+        <ul>
+          <li>Many disabled Muslims can perform Hajj <strong>with adequate planning</strong>. Discuss your needs with your <strong>travel agent</strong> before booking.</li>
+          <li><strong>Airports:</strong> Jeddah airport provides facilities; ensure your agent <strong>notifies airport staff in advance</strong>.</li>
+          <li><strong>Masjid al-Haram:</strong> Wheelchairs are free; a paid pushing service is available if needed.</li>
+        </ul>
+
+        <h4>Why Hajj Is Hard for Elders (esp. with health issues)</h4>
+        <ul>
+          <li><strong>Crowds &amp; queues:</strong> long toilet lines; incidents can happen when stuck waiting.</li>
+          <li><strong>Mobility &amp; access:</strong> Mina → ʿArafah → Muzdalifah → Ḥaram (~48 intense hours) often involves <strong>hours of walking</strong>. Buses are crowded/slow; <strong>wheelchairs aren’t a simple fix</strong>.</li>
+          <li><strong>Restricted movement:</strong> closures can force long walks to/ from transport.</li>
+          <li><strong>Health stressors:</strong> even fit pilgrims often get sick (colds, nosebleeds, exhaustion). Hajj is <strong>far tougher than ʿUmrah</strong>.</li>
+        </ul>
+
+        <p><strong>Mina Camp accommodation &amp; facilities</strong></p>
+        <ul>
+          <li>Sleeping &amp; luggage: sofa beds in AC halls; space is tight—pack light.</li>
+        </ul>
+        <p><a href="assets/images/image9.png" target="_blank" rel="noopener"><img src="assets/images/image9.png" alt="Mina hall example" loading="lazy" class="inline-img"/></a></p>
+        <p><a href="assets/images/image10.png" target="_blank" rel="noopener"><img src="assets/images/image10.png" alt="Mina space" loading="lazy" class="inline-img"/></a></p>
+        <ul>
+          <li>Women’s area: separate section; plan meet-ups at the entrance.</li>
+          <li>Meals &amp; refreshments: many UK packages include three meals + snacks.</li>
+          <li>Power &amp; charging: typically one Saudi socket per person.</li>
+        </ul>
+        <p><a href="assets/images/image11.png" target="_blank" rel="noopener"><img src="assets/images/image11.png" alt="Welcome pack" loading="lazy" class="inline-img"/></a></p>
+
+        <p><strong>Travel &amp; logistics</strong></p>
+        <p><em>Inter-city: Madinah → Makkah (train vs coach)</em></p>
+        <ul>
+          <li>Coach: ~10 hours (traffic & checks).</li>
+          <li>Train: ~2.5 hours (~£35 pp); punctual—arrive early.</li>
+          <li>Baggage: ~23 kg typical; oversize may go via Saudi Post.</li>
+        </ul>
+        <p><em>Local transfers</em></p>
+        <ul>
+          <li>Madinah: Uber to station.</li>
+          <li>Makkah: station taxi when Uber wait was long.</li>
+        </ul>
+        <p><em>Eid day: Jamarat ↔ al-Haram</em></p>
+        <ul>
+          <li>Public shuttle to al-Haram often available; plan return route; train can be faster if buses stall.</li>
+        </ul>
+
+        <p><strong>Stay &amp; comfort</strong></p>
+        <p><em>Muzdalifah (sleeping spot)</em></p>
+        <ul><li>Avoid sleeping near main doors—constant foot traffic.</li></ul>
+
+        <p><em>Toilets &amp; showers</em></p>
+        <ul>
+          <li>Avoid peak times (~30 min before prayers).</li>
+          <li>Mostly squat toilets; seated queues are longer.</li>
+          <li>Bring a waterproof bag to hang clothes; use scent-free soap.</li>
+        </ul>
+
+        <p><em>Hydration, heat &amp; sun</em></p>
+        <ul>
+          <li>Hydrate frequently; shower when possible.</li>
+          <li>For walks &gt;20 minutes, carry water and a spray bottle.</li>
+          <li>Use sun cream; sunglasses; UV umbrella.</li>
+        </ul>
+
+        <p><strong>Medication &amp; medical access</strong></p>
+        <ul>
+          <li>Bring enough medication; pharmacies are widespread (possibly not inside Mina camps).</li>
+          <li>Doctors were available in Mina camps for urgent needs.</li>
+        </ul>
+        <p class="note med-note"><strong>Medication note:</strong> Always read the package leaflet before taking any medication and check for interactions/contraindications. If unsure, consult a pharmacist or doctor.</p>
+
+        <p><strong>Ihram &amp; clothing</strong></p>
+        <ul>
+          <li>We bought Ihram online; Rawaf Mina also provided one in Madinah.</li>
+          <li>If your Ihram is clean, keep using it; carry a spare just in case.</li>
+        </ul>
+
+        <p><strong>Footwear, fitness &amp; sleep</strong></p>
+        <ul>
+          <li>Break in slippers; walk daily in the 10 days before departure.</li>
+          <li>Earplugs help in Mina if you’re a light sleeper.</li>
+        </ul>
+
+        <p><strong>Hotels, water &amp; food</strong></p>
+        <ul>
+          <li>Makkah (Voco) ~30-minute walk to al-Haram; shuttles stopped as Hajj neared.</li>
+          <li>Water widely available; charities distribute free bottles near al-Haram.</li>
+        </ul>
+
+        <p><strong>Navigating the Haram (Tawaf by floor)</strong></p>
+        <ul>
+          <li>1st: often best view of the Ka‘bah; 2nd: wheelchair ramp; 2.5: scooters only; 3rd: roof.</li>
+        </ul>
+
+        <p><strong>Key compliance note</strong></p>
+        <ul><li>During Hajj days, spend more than half the night within Mina’s boundaries.</li></ul>
+
+        <h3><span class="anchor">#</span>Medical advice for pilgrims during Hajj</h3>
+        <p><strong>Personal medical kit</strong></p>
+        <ul>
+          <li>Paracetamol, anti-diarrhoeal (e.g., Imodium), plasters & disinfectant (e.g., Betadine), skin-irritation cream (e.g., Bepanthen), sunscreen, lip balm, hand sanitiser, wet wipes, personal medications with prescriptions.</li>
+        </ul>
+        <p class="note med-note"><strong>Medication note:</strong> Always read the package leaflet before taking any medication. Follow dosing guidance and seek advice if you have other conditions or take regular medicines.</p>
+
+        <p><strong>Prevent common illnesses</strong></p>
+        <ul><li>Drink water regularly; sun protection; maintain hygiene.</li></ul>
+
+        <p><strong>Foot care</strong></p>
+        <ul><li>Wear open, comfortable, well-broken-in shoes; manage blisters promptly; keep feet dry.</li></ul>
+
+        <p><strong>Avoid physical exhaustion</strong></p>
+        <ul><li>Walk at your pace; rest in shade; know heat-stroke signs and tell a guide.</li></ul>
+
+        <p><strong>Chronic illnesses</strong></p>
+        <ul><li>Bring enough medication; keep treatment with you; inform a guide.</li></ul>
+
+        <p><strong>Diabetic pilgrims using insulin</strong></p>
+        <ul><li>Use insulated pouch for insulin; keep snacks for hypos; monitor sugars; inform a team member.</li></ul>
+        <p class="note med-note"><strong>Medication note:</strong> Check the insulin leaflet for storage/temperature limits and dosing instructions. If unsure, ask your clinician.</p>
+
+        <p><strong>If you feel unwell</strong></p>
+        <ul><li>Don’t stay alone; notify a guide; go to a medical station promptly.</li></ul>
+
+        <h3><span class="anchor">#</span>Organisational advice for the five days</h3>
+        <ul>
+          <li><strong>Patience &amp; brotherhood:</strong> crowds and heat are part of the test—prioritise respect and support.</li>
+          <li><strong>Follow leaders:</strong> stay with your group (Mina → ʿArafah → Muzdalifah).</li>
+          <li><strong>Take turns &amp; stay orderly:</strong> queue patiently; carry a small personal kit.</li>
+          <li><strong>Manage effort:</strong> steady pace, hydrate, rest.</li>
+          <li><strong>Spiritual focus:</strong> turn delays into worship—du‘ā’, dhikr, Qur’an, reflection.</li>
+          <li><strong>Living well in tents:</strong> keep noise low, stay tidy, organise belongings, share fairly, accept minor inconveniences with ṣabr.</li>
+        </ul>
+
+        <!-- VI. Hajj rituals -->
+        <h2 id="vi-hajj-rituals"><span class="anchor">#</span>VI. Hajj rituals</h2>
+        <p>This section offers a high-level overview only. Read widely and watch relevant videos…</p>
+        <ul><li dir="rtl" lang="ar">مناسك الحج والعمرة في الإسلام في ضوء الكتاب والسنة</li></ul>
+        <p dir="rtl" lang="ar">( سعيد بن على بن وهف القحطاني)</p>
+        <p><a href="assets/images/image12.png" target="_blank" rel="noopener"><img src="assets/images/image12.png" alt="Book 1" loading="lazy" class="inline-img"/></a></p>
+        <p><a href="assets/images/image13.png" target="_blank" rel="noopener"><img src="assets/images/image13.png" alt="Book 2" loading="lazy" class="inline-img"/></a></p>
+        <p><a href="assets/images/image14.png" target="_blank" rel="noopener"><img src="assets/images/image14.png" alt="Book 3" loading="lazy" class="inline-img"/></a></p>
+
+        <!-- VII. Videos -->
+        <h2 id="vii-videos-additional-materials-questions-to-expect"><span class="anchor">#</span>VII. Videos &amp; additional materials &amp; Questions to expect</h2>
+        <ul>
+          <li>https://www.youtube.com/watch?v=JXSPmyK0P4k</li>
+          <li>https://www.youtube.com/watch?v=TD9FHmBCz5k&amp;list=PL4C0FD26ABA759D1E</li>
+          <li>https://m.youtube.com/shorts/XF5Gg8Hw9bI</li>
+          <li>https://youtu.be/OLIcIvwMTJM?si=gSYPGKT19ECb4kzK</li>
+          <li>https://www.youtube.com/watch?v=wik5QQA1zRo</li>
+          <li>https://www.facebook.com/share/v/1C2gJqGkiE/?mibextid=wwXIfr</li>
+          <li>https://youtu.be/YihoTBfkO9Q?si=jAaGWWK4ktL2PHKn</li>
+          <li>https://www.youtube.com/watch?v=SNyLksy8DNE</li>
+          <li>https://www.youtube.com/watch?v=hb2KwtxJpj8</li>
+          <li>https://www.youtube.com/watch?v=1Gakh8sX5OE</li>
+          <li>https://www.youtube.com/watch?v=9thMVV4yM3Y</li>
+          <li>https://www.youtube.com/watch?v=JdFb3VIJv1A</li>
+          <li>https://www.youtube.com/watch?v=7rivZ04c2X4</li>
+          <li>https://www.youtube.com/watch?v=uEYbApEqmP0</li>
+          <li>https://www.youtube.com/watch?v=7nzL4Sjd3Dc</li>
+          <li>https://www.youtube.com/watch?v=D7aV3S7zqsY</li>
+          <li>https://www.youtube.com/watch?v=rl2jjjROIFQ</li>
+        </ul>
+
+        <!-- VIII. Duas -->
+        <h2 id="viii-duas"><span class="anchor">#</span>VIII. Duas</h2>
+        <p>Prepare as much as you can—especially for the Day of ʿArafah.</p>
+        <p><a href="assets/images/image15.png" target="_blank" rel="noopener"><img src="assets/images/image15.png" alt="Dua 1" loading="lazy" class="inline-img"/></a></p>
+        <p><a href="assets/images/image16.png" target="_blank" rel="noopener"><img src="assets/images/image16.png" alt="Dua 2" loading="lazy" class="inline-img"/></a></p>
+        <p><a href="assets/images/image17.png" target="_blank" rel="noopener"><img src="assets/images/image17.png" alt="Dua 3" loading="lazy" class="inline-img"/></a></p>
+        <p><a href="assets/images/image18.png" target="_blank" rel="noopener"><img src="assets/images/image18.png" alt="Dua 4" loading="lazy" class="inline-img"/></a></p>
+        <p><a href="assets/images/image19.png" target="_blank" rel="noopener"><img src="assets/images/image19.png" alt="Dua 5" loading="lazy" class="inline-img"/></a></p>
+        <p><a href="assets/images/image20.png" target="_blank" rel="noopener"><img src="assets/images/image20.png" alt="Dua 6" loading="lazy" class="inline-img"/></a></p>
+        <p><a href="assets/images/image21.png" target="_blank" rel="noopener"><img src="assets/images/image21.png" alt="Dua 7" loading="lazy" class="inline-img"/></a></p>
+        <p><a href="assets/images/image22.png" target="_blank" rel="noopener"><img src="assets/images/image22.png" alt="Dua 8" loading="lazy" class="inline-img"/></a></p>
+      </article>
+    </div>
+
+    <footer>
+      <p>&copy; 2025 Abdellatif Salah &amp; Manel Ibrahim. Always confirm time-sensitive details on official sources.</p>
+    </footer>
+  </div>
+</body>
+</html>
